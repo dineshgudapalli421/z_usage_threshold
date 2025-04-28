@@ -1,0 +1,77 @@
+<mvc:View xmlns:vh="sap.ui.mdc.filterbar.vh" xmlns:smartfield="sap.ui.comp.smartfield" controllerName="com.sap.lh.mr.zusagethreshold.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true"
+    xmlns:f="sap.f" 
+    xmlns:mdc="sap.ui.mdc"
+    xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar">
+    <f:DynamicPage headerExpanded="{/headerExpanded}" showFooter="true" fitContent="true">
+        <!-- <f:title>
+                <f:DynamicPageTitle>
+                    <f:heading>
+                        <Title text="{i18n>appDescription}"/>
+                    </f:heading>
+                </f:DynamicPageTitle>
+            </f:title> -->
+        <f:header>
+            <f:DynamicPageHeader>
+				<mdc:FilterBar id="thresholdFilterbar"
+                    delegate='\{"name": "mdc/sample/delegate/ODATAFilterBarDelegate", "payload": \{\}\}'
+					p13nMode = "Item,Value"
+                    filtersChanged=".onFiltersChanged" showAdaptFiltersButton="false">
+                <mdc:filterItems>
+                    <mdc:FilterField
+							label="Billing Analysis"
+							propertyKey="billingAnalysis"
+							dataType="sap.ui.model.type.String"
+							conditions="{$filters>/conditions/billingAnalysis}">
+					</mdc:FilterField>
+                    <mdc:FilterField
+							label="Rate Category"
+							propertyKey="rateCategory"
+							dataType="sap.ui.model.type.String"
+							conditions="{$filters>/conditions/rateCategory}">
+					</mdc:FilterField>
+                    <mdc:FilterField
+							id="field-first-ascent"
+							label="Billing Period"
+							propertyKey="billingPeriod"
+							dataType="sap.ui.model.type.Date"
+							conditions="{$filters>/conditions/billingPeriod}"
+							delegate="{name: 'sap/ui/mdc/field/FieldBaseDelegate'}"
+							maxConditions="1"
+							operators="EQ,BT">
+						</mdc:FilterField>
+                    <mdc:FilterField
+							label="Profile Ratio"
+							propertyKey="profileRation"
+							dataType="sap.ui.model.type.String"
+							dataTypeFormatOptions='\{"emptyString": 0\}'
+							dataTypeConstraints='\{"minimum": 0\}'
+							conditions="{$filters>/conditions/profileRation}"
+							delegate='\{"name": "sap/ui/mdc/field/FieldBaseDelegate"\}'
+							operators="EQ">
+						</mdc:FilterField>
+                    <mdc:FilterField
+							label="Threshold"
+							propertyKey="threshold"
+							dataType="sap.ui.model.type.String"
+							dataTypeFormatOptions='\{"emptyString": 0\}'
+							dataTypeConstraints='\{"minimum": 0\}'
+							conditions="{$filters>/conditions/threshold}"
+							delegate='\{"name": "sap/ui/mdc/field/FieldBaseDelegate"\}'
+							operators="EQ">
+						</mdc:FilterField>
+                </mdc:filterItems>
+                </mdc:FilterBar>
+			</f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+        <core:Fragment
+                fragmentName="com.sap.lh.mr.zusagethreshold.fragment.items"
+                type="XML"
+            />
+        </f:content>
+      
+    </f:DynamicPage>
+</mvc:View>

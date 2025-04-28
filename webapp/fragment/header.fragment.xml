@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.f" 
+xmlns:sfb="sap.ui.comp.smartfilterbar" 
+xmlns:core="sap.ui.core">
+    <!-- Product ID Filter -->
+    <DynamicPage id="dynamicPage" fitContent="true">
+		<header>
+			<DynamicPageHeader>
+				<sfb:SmartFilterBar
+					id="smartFilterBar"
+					enableBasicSearch="true">					     	
+				</sfb:SmartFilterBar>
+			</DynamicPageHeader>
+		</header>
+	</DynamicPage>
+</core:FragmentDefinition>

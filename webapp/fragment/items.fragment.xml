@@ -1,0 +1,165 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"   xmlns="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns:m="sap.m"
+>
+
+    <Table
+                rows="{/ThresholdUsageOutputSet}"
+                selectionMode="MultiToggle"
+                paste="onPaste"
+                ariaLabelledBy="title">
+                <extension>
+                    <m:OverflowToolbar style="Clear">
+                        <m:Title id="title" text="Usage Threshold Validation"/>
+                    </m:OverflowToolbar>
+                </extension>
+                <columns>
+                    <Column width="11rem">
+                        <m:Label text="Billing Class" />
+                        <template>
+                            <m:Input value="{BillingClass}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Rate Category" />
+                        <template>
+                            <m:Input value="{RateCategory}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Billing Period Month" />
+                        <template>
+                            <m:Input value="{BillingPeriodMonth}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Billing Period Year" />
+                        <template>
+                            <m:Input value="{BillingPeriodYear}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Profile Role" />
+                        <template>
+                            <m:Input value="{ProfileRole}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Threshold" />
+                        <template>
+                            <m:Input value="{Threshold}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="CustomerNo" />
+                        <template>
+                            <m:Input value="{Customer No}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Customer Name" />
+                        <template>
+                            <m:Input value="{CustomerName}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Meter No" />
+                        <template>
+                            <m:Input value="{MeterNo}"/>
+                        </template>
+                    </Column>                   
+                    <Column width="11rem">
+                        <m:Label text="Address" />
+                        <template>
+                            <m:Input value="{Address}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Installation" />
+                        <template>
+                            <m:Input value="{Installation}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Device Location" />
+                        <template>
+                            <m:Input value="{DeviceLocation}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Contract Account" />
+                        <template>
+                            <m:Input value="{ContractAccount}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Billing Period" />
+                        <template>
+                            <m:Input value="{BillingPeriod}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Valid From" />
+                        <template>
+                            <m:Input value="{ValidFrom}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Valid To" />
+                        <template>
+                            <m:Input value="{ValidTo}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Current Month Peak" />
+                        <template>
+                            <m:Input value="{CurrentMonthPeak}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Current Month Low" />
+                        <template>
+                            <m:Input value="{CurrentMonthLow}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Last Month Peak" />
+                        <template>
+                            <m:Input value="{LastMonthPeak}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Last Month Low" />
+                        <template>
+                            <m:Input value="{LastMonthLow}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Last Year Same Month Peak" />
+                        <template>
+                            <m:Input value="{LastYearSameMonthPeak}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Last Year Same Month Low" />
+                        <template>
+                            <m:Input value="{LastYearSameMonthLow}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Peak KWH Difference" />
+                        <template>
+                            <m:Input value="{PeakKWHDifference}"/>
+                        </template>
+                    </Column>
+                    <Column width="11rem">
+                        <m:Label text="Low KWH Difference" />
+                        <template>
+                            <m:Input value="{LowKWHDifference}"/>
+                        </template>
+                    </Column>                    
+                </columns>
+            </Table>
+</core:FragmentDefinition>
